@@ -1,5 +1,6 @@
 import { Box, Container, createTheme, ThemeProvider, Typography } from '@mui/material'
 import { SiChatbot } from 'react-icons/si'
+import Chat from './Chat'
 
 const Window = () => {
     const theme = createTheme({
@@ -17,7 +18,7 @@ const Window = () => {
         sx={{
           width: '30vw',
           height: '80vh',
-          borderRadius: 7,
+          borderRadius: 5,
           padding:'20px',
           bgcolor: 'primary.main',
           '&:hover': {
@@ -49,7 +50,7 @@ const Window = () => {
         </Box>
         
         </Box>
-        
+        <Chat/>
       </Box>
     </ThemeProvider>
 

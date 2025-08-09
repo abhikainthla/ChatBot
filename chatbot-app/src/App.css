@@ -6,6 +6,11 @@
   font-family: "Mona Sans", sans-serif;
 }
 
+body{
+  background-color: #f4f8fe;
+
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
