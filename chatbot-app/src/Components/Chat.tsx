@@ -4,11 +4,12 @@ import { IoMdSend } from "react-icons/io";
 
 const Chat = () => {
   const [message, setMessage] = useState("");
-  const [messages, setMessages] = useState([]);
+const [messages, setMessages] = useState<string[]>([]);
 
-  const handleChange = (e) => {
-    setMessage(e.target.value);
-  };
+const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  setMessage(e.target.value);
+};
+
 
   const handleSend = () => {
     if (!message.trim()) return; // avoid sending empty messages
@@ -34,10 +35,11 @@ const Chat = () => {
           flexGrow: 1,
           overflowY: "auto",
           padding: "10px",
+          alignSelf:'flex-end'
         }}
       >
         {messages.map((msg, i) => (
-          <Box key={i} sx={{ mb: 1, bgcolor: "#f0f0f0", p: 1, borderRadius: 2 }}>
+          <Box key={i} sx={{ mb: 1, bgcolor: "#f0f0f0", p: 1, borderRadius: 2, width: 'fit-content', justifySelf:'flex-end' }}>
             {msg}
           </Box>
         ))}
